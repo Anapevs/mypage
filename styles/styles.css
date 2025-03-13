@@ -11,6 +11,11 @@ body {
     text-align: center;
 }
 
+header img {
+    height: 179px;
+    border-radius: 82px;
+}
+
 header h1 {
     font-size: 4em;
     margin: auto;
@@ -45,6 +50,16 @@ header p {
     transition: right 0.3s ease-in-out;
     padding-top: 60px;
 }
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 13px;
+    background: none;
+    height: 1px;
+    width: 1px;
+    border: none;
+    cursor: pointer;
+}
 .menu button {
     display: block;
     width: 250px;
@@ -56,6 +71,8 @@ header p {
     padding: 34px;
     border-color: #d176a4;
 }
+
+
 .menu button:hover {
     background: #e494bc;
 }

@@ -15,7 +15,8 @@ sectionExperience.style.display = 'none'
 sectionContact.style.display = 'none'
 
 function toggleMenu() {
-    document.getElementById("menu").classList.toggle("show");
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("show");
 }
 
 function showCertifications () { 
