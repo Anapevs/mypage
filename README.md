@@ -5,7 +5,21 @@ This is a **personal business portfolio website** built to showcase my skills, e
 **📂 Project Structure**
 
 ```
-
+/mypage
+│── index.html # Main webpage
+│── index.js # JavaScript logic
+│── README.md 
+│── /styles/ # Styles and images
+│ ├── styles.css # Main stylesheet
+│ ├── picture.png # Profile picture
+│ ├── photoshop.png # Photoshop icon
+│ ├── illustrator.png # Illustrator icon
+│ ├── davinci.png # DaVinci Resolve icon
+│ ├── python.png # Python icon
+│ ├── javascript.png # JavaScript icon
+│ ├── html.png # HTML icon
+│ ├── css.png # CSS icon
+│ ├── nodejs.png # Node.js icon
 ```
 **🚀 Features**
 - **Business Profile Showcase**: Displays my **experience, skills, certifications, and services**.
