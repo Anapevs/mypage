@@ -1,63 +1,87 @@
-const homeButton = document.getElementById("home-button")
-const experienceButton = document.getElementById('experience-button')
-const certificationsButton = document.getElementById('certifications-button')
-const contactButton = document.getElementById('contact-button')
+// DOM Elements
+const sections = {
+    home: {
+        about: document.getElementById('about'),
+        skills: document.getElementById('skills'),
+        services: document.getElementById('services')
+    },
+    certifications: document.getElementById('certifications'),
+    experience: document.getElementById('experience'),
+    contact: document.getElementById('contact')
+};
 
-const servicesSection = document.getElementById('services')
-const sectionAbout = document.getElementById('about')
-const sectionCertifications = document.getElementById('certifications')
-const sectionSkills = document.getElementById('skills')
-const sectionExperience = document.getElementById('experience')
-const sectionContact = document.getElementById('contact')
+const menuItems = {
+    home: document.getElementById("home-button"),
+    experience: document.getElementById('experience-button'),
+    certifications: document.getElementById('certifications-button'),
+    contact: document.getElementById('contact-button')
+};
 
-sectionCertifications.style.display = 'none'
-sectionExperience.style.display = 'none'
-sectionContact.style.display = 'none'
+// Initialize sections visibility
+Object.values(sections).forEach(section => {
+    if (typeof section === 'object') {
+        Object.values(section).forEach(subSection => {
+            subSection.style.display = 'block';
+        });
+    } else {
+        section.style.display = 'none';
+    }
+});
 
+// Toggle menu functionality
 function toggleMenu() {
-            const menu = document.getElementById("menu");
-            menu.classList.toggle("show");
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("show");
 }
 
-function showCertifications () { 
-    sectionCertifications.style.display = 'block'
+// Generic function to show/hide sections
+function showSection(targetSection) {
+    // Hide all sections
+    Object.values(sections).forEach(section => {
+        if (typeof section === 'object') {
+            Object.values(section).forEach(subSection => {
+                subSection.style.display = 'none';
+            });
+        } else {
+            section.style.display = 'none';
+        }
+    });
 
-    sectionAbout.style.display = 'none'
-    sectionSkills.style.display = 'none'
-    servicesSection.style.display = 'none'
-    
-    sectionExperience.style.display = 'none'
-    sectionContact.style.display = 'none'
+    // Show target section
+    if (typeof targetSection === 'object') {
+        Object.values(targetSection).forEach(section => {
+            section.style.display = 'block';
+        });
+    } else {
+        targetSection.style.display = 'block';
+    }
 }
 
-function showExperience () {
-    sectionExperience.style.display = 'block'
-
-    sectionAbout.style.display = 'none'
-    sectionSkills.style.display = 'none'
-    servicesSection.style.display = 'none'
-    
-    sectionCertifications.style.display = 'none'
-    sectionContact.style.display = 'none'
+// Section display functions
+function showHome() {
+    showSection(sections.home);
 }
 
-function showContact () {
-    sectionContact.style.display = 'block'
-
-    sectionAbout.style.display = 'none'
-    sectionSkills.style.display = 'none'
-    servicesSection.style.display = 'none'
-    
-    sectionCertifications.style.display = 'none'
-    sectionExperience.style.display = 'none'
+function showCertifications() {
+    showSection(sections.certifications);
 }
 
-function showHome () {
-    sectionAbout.style.display = 'block'
-    sectionSkills.style.display = 'block'
-    servicesSection.style.display = 'block'
-
-    sectionCertifications.style.display = 'none'
-    sectionExperience.style.display = 'none'
-    sectionContact.style.display = 'none'
+function showExperience() {
+    showSection(sections.experience);
 }
+
+function showContact() {
+    showSection(sections.contact);
+}
+
+// Event Listeners
+Object.values(menuItems).forEach(item => {
+    item.addEventListener('click', (e) => {
+        // Remove active class from all menu items
+        Object.values(menuItems).forEach(menuItem => {
+            menuItem.classList.remove('active');
+        });
+        // Add active class to clicked menu item
+        e.target.classList.add('active');
+    });
+});
