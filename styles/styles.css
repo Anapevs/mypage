@@ -52,18 +52,20 @@ header p {
 }
 .close-btn {
     position: absolute;
-    top: 20px;
-    right: 13px;
-    background: none;
+    top: 38px;
+    right: 39px;
+    background: #d176a4;
     height: 1px;
     width: 1px;
     border: none;
     cursor: pointer;
+    color: white;
+    font-size: 2em;
 }
-.menu button {
+.menu div {
     display: block;
-    width: 250px;
-    font-size: xx-large;
+    width: 182px;
+    font-size: x-large;
     size: auto;
     color: white;
     background-color: #d176a4;
@@ -73,7 +75,7 @@ header p {
 }
 
 
-.menu button:hover {
+.menu div:hover {
     background: #e494bc;
 }
 .menu.show {
@@ -120,13 +122,6 @@ h2 {
     margin-top: 20px;
 }
 
-ul {
-    list-style-position: inside; 
-    padding-left: 0;
-    text-align: left;
-    margin-left: 38px;
-}
-
 .skills-container img {
     width: auto; 
     height: 60px;
@@ -135,4 +130,37 @@ ul {
 
 .skills-container img:hover {
     transform: scale(1.1);
+}
+
+ul {
+    list-style-position: inside; 
+    padding-left: 0;
+    text-align: left;
+    margin-left: 38px;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+}
+footer div {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ff1493;
+    border-radius: 5px;
+    background-color: #d176a4;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #e494bc;
 }

@@ -12,8 +12,10 @@
         <h1>Ana Escalante</h1>
         <p><b>Graphic Designer and Web Developer</b></p>
     </header>
-    <div class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰</div>
+    <button class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰</button>
+    
     <div class="menu" id="menu">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
         <div class="menu-item" id="home-button" onclick="showHome()">Home</div>
         <div class="menu-item" id="experience-button" onclick="showExperience()">Experience</div>
         <div class="menu-item" id="certifications-button" onclick="showCertifications()">Certifications</div>
@@ -33,11 +35,8 @@
             <div><strong>2D Animation</strong></div>
             <div><strong>Logo Generation</strong></div>
             <div><strong>Illustration</strong></div>
-            
-            <div><strong>Web Development</div>
-          
+            <div><strong>Web Development</strong></div>
             <div><strong>Storyboarding</strong></div>
-            
             <div><strong>E-learning content creation</strong></div>
         </div>
     </section>
@@ -89,7 +88,8 @@
     </section>
 
     <footer id="contact">
-        <p>Email: <a href="mailto:anaispe@gmail.com">anaispev@gmail.com</a> || Github: <a href="https://github.com/Anapevs">Anapevs</a></p> 
+        <div>Email: <a href="mailto:anaispe@gmail.com">anaispev@gmail.com</a> </div>
+        <div> Github: <a href="https://github.com/Anapevs">Anapevs</a></div> 
     </footer>
     <script src="index.js"></script>   
 </body>
